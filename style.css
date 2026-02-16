@@ -22,10 +22,16 @@
 body {
 	font-family: "Space Grotesk", "Assistant", sans-serif;
 	color: var(--ink);
-	
+	background: var(--white);
 	line-height: 1.6;
 	min-height: 100vh;
 
+}
+
+.page-shell {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0 3rem 3rem;
 }
 
 img {
@@ -34,10 +40,7 @@ img {
 }
 
 main {
-	display: flex;
-	flex-direction: column;
-	gap: 2rem;
-	margin-top: 2rem;
+	margin-top: 2.5rem;
 }
 
 .site-header {
@@ -47,9 +50,9 @@ main {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 1rem clamp(1.5rem, 4vw, 5rem);
-	backdrop-filter: blur(20px);
-	border-bottom: 1px solid rgba(20, 36, 51, 0.05);
+	background: var(--white);
+	padding: 1.25rem 0;
+	border-bottom: 1px solid rgba(20, 36, 51, 0.07);
 }
 
 .logo-mark {
@@ -57,7 +60,8 @@ main {
 	align-items: center;
 	gap: 0.6rem;
 	font-weight: 600;
-	color: var(--teal-dark);
+	/* color: var(--teal-dark); */
+	font-size: 1.2rem;
 }
 
 .logo-mark img {
@@ -73,7 +77,7 @@ main {
 
 .site-nav a {
 	text-decoration: none;
-	color: var(--stone);
+	color: #ababab;
 	font-weight: 500;
 	transition: color 0.2s ease;
 }
@@ -82,17 +86,60 @@ main {
 	color: var(--teal-dark);
 }
 
-.nav-cta {
-	padding: 0.7rem 1.5rem;
-	border-radius: 999px;
-	background: var(--navy);
-	color: var(--white);
-	text-decoration: none;
-	font-weight: 600;
-	transition: transform 0.2s ease, background 0.2s ease;
+.hero {
+	padding: 1.5rem 0;
+	text-align: center;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.nav-cta:hover {
-	background: var(--teal-dark);
-	transform: translateY(-2px);
+.hero-icon {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 1.5rem;
+}
+
+.hero-icon img {
+	width: 48px;
+	height: 48px;
+}
+
+.hero h1 {
+	font-size: clamp(1.5rem, 2vw, 1.5rem);
+	color: var(--teal);
+	font-weight: 400;
+	margin-bottom: 2rem;
+}
+
+.hero-columns {
+	display: flex;
+	gap: 3rem;
+	color: #747474;
+	font-size: 1.1rem;
+	line-height: 1.8;
+	justify-content: center;
+}
+
+.hero-columns p {
+	flex: 1;
+	justify-content: flex-start;
+}
+
+@media (max-width: 768px) {
+	.page-shell {
+		padding: 0 1.5rem 2.5rem;
+	}
+
+	.site-header {
+		flex-direction: column;
+		gap: 0.75rem;
+	}
+
+	.hero-columns {
+		flex-direction: column;
+	}
+
+	.site-nav {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 }

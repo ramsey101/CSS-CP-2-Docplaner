@@ -1,0 +1,98 @@
+:root {
+	--teal: #00b39b;
+	--teal-dark: #009782;
+	--mint: #c9f7ee;
+	--navy: #0f1f2b;
+	--ink: #142433;
+	--cloud: #f4fbf9;
+	--stone: #5b6673;
+	--white: #ffffff;
+	--gradient: radial-gradient(circle at 20% 20%, rgba(0, 179, 155, 0.4), transparent 60%),
+		radial-gradient(circle at 80% 0%, rgba(0, 151, 130, 0.35), transparent 50%),
+		linear-gradient(135deg, #f4fbf9, #f0f7ff);
+	font-size: 16px;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Space Grotesk", "Assistant", sans-serif;
+	color: var(--ink);
+	
+	line-height: 1.6;
+	min-height: 100vh;
+
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	margin-top: 2rem;
+}
+
+.site-header {
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem clamp(1.5rem, 4vw, 5rem);
+	backdrop-filter: blur(20px);
+	border-bottom: 1px solid rgba(20, 36, 51, 0.05);
+}
+
+.logo-mark {
+	display: flex;
+	align-items: center;
+	gap: 0.6rem;
+	font-weight: 600;
+	color: var(--teal-dark);
+}
+
+.logo-mark img {
+	width: 36px;
+	height: 36px;
+}
+
+.site-nav {
+	display: flex;
+	gap: 1.5rem;
+	font-size: 0.95rem;
+}
+
+.site-nav a {
+	text-decoration: none;
+	color: var(--stone);
+	font-weight: 500;
+	transition: color 0.2s ease;
+}
+
+.site-nav a:hover {
+	color: var(--teal-dark);
+}
+
+.nav-cta {
+	padding: 0.7rem 1.5rem;
+	border-radius: 999px;
+	background: var(--navy);
+	color: var(--white);
+	text-decoration: none;
+	font-weight: 600;
+	transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.nav-cta:hover {
+	background: var(--teal-dark);
+	transform: translateY(-2px);
+}

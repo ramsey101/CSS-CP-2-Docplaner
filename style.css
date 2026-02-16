@@ -43,6 +43,10 @@ main {
 	margin-top: 2.5rem;
 }
 
+.section-spacer {
+	margin-top: 3rem;
+}
+
 .site-header {
 	position: sticky;
 	top: 0;
@@ -122,6 +126,69 @@ main {
 .hero-columns p {
 	flex: 1;
 text-align: left;
+}
+
+.solutions {
+	padding: 3rem 0 1rem;
+}
+
+.solution-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	gap: 1.5rem;
+}
+
+.solution-card {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	padding: 2rem;
+	border-radius: 24px;
+	color: var(--white);
+	min-height: 350px;
+	box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.patients-card {
+	background: #00ccb1;
+}
+
+.doctors-card {
+	background: #3d83df;
+}
+
+.clinics-card {
+	background: #1b2734;
+}
+
+.solution-icon img {
+	width: 32px;
+	height: 32px;
+}
+
+.solution-card h2 {
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+
+.solution-card p {
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+.solution-cta {
+	margin-top: auto;
+	border: none;
+	background: transparent;
+	color: var(--white);
+	font-size: 1rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+	cursor: pointer;
 }
 
 @media (max-width: 768px) {

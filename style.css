@@ -31,7 +31,7 @@ body {
 .page-shell {
 	max-width: 1100px;
 	margin: 0 auto;
-	padding: 0 3rem 3rem;
+	padding: 0 3rem;
 }
 
 img {
@@ -50,13 +50,18 @@ main {
 .site-header {
 	position: sticky;
 	top: 0;
-	z-index: 10;
+	width: 100%;
+	background: var(--white);
+	opacity: 0.99;
+	border-bottom: 1px solid rgba(20, 36, 51, 0.07);
+	z-index: 20;
+}
+
+.header-inner {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	background: var(--white);
 	padding: 1.25rem 0;
-	border-bottom: 1px solid rgba(20, 36, 51, 0.07);
 }
 
 .logo-mark {
@@ -146,7 +151,7 @@ text-align: left;
 	border-radius: 24px;
 	color: var(--white);
 	min-height: 350px;
-	box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+	
 }
 
 .patients-card {
@@ -227,6 +232,229 @@ text-align: left;
 	filter: grayscale(0) opacity(1);
 }
 
+
+.stats {
+	margin-top: 3rem;
+	width: 100%;
+	padding: 4.5rem 0;
+	background: linear-gradient(120deg, #e9faf7, #d8f4f3);
+	background-image: linear-gradient(120deg, #e9faf7, #d8f4f3), url("img/stats-bg-image.png");
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	background-size: cover, 420px;
+}
+
+.stats-inner {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0 3rem;
+	display: flex;
+	gap: 3rem;
+	align-items: center;
+}
+
+.stats-copy {
+	flex: 1;
+}
+
+.stats-copy h2 {
+	font-size: 2.6rem;
+	color: var(--teal);
+	font-weight: 300;
+	margin-bottom: 1rem;
+}
+
+.stats-copy p {
+	color: #5e7a7c;
+	max-width: 22rem;
+}
+
+.stats-grid {
+	flex: 1;
+	display: grid;
+	grid-template-columns: repeat(2, minmax(180px, 1fr));
+	gap: 1.5rem;
+}
+
+.stat-card {
+	background: var(--white);
+	border-radius: 18px;
+	padding: 1.75rem 1.5rem;
+	text-align: center;
+	box-shadow: 0 25px 60px rgba(15, 31, 43, 0.08);
+}
+
+.stat-card img {
+	width: 48px;
+	height: 48px;
+	margin: 0 auto 1rem;
+}
+
+.stat-card h3 {
+	color: var(--teal);
+	font-size: 1.3rem;
+	margin-bottom: 0.75rem;
+}
+
+.stat-card p {
+	color: #5e7a7c;
+	font-size: 0.95rem;
+}
+.improve-lives {
+	padding: 3rem 0;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.improve-lives h2 {
+	font-size: clamp(2.4rem, 4vw, 2.9rem);
+	color: var(--teal);
+	font-weight: 300;
+	line-height: 1.2;
+	letter-spacing: -0.02em;
+	margin-bottom: 1.25rem;
+}
+
+.improve-lives h2 span {
+	display: block;
+	margin-top: 0.4rem;
+}
+
+.improve-lives-description {
+	color: #5e7a7c;
+	max-width: 36rem;
+	font-size: 1.1rem;
+	line-height: 1.7;
+	margin: 0 auto;
+}
+
+.offices {
+	padding: 1.5rem 0 4rem;
+}
+
+.office-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 2rem;
+}
+
+.office-card {
+	background: var(--white);
+	border-radius: 24px;
+	box-shadow: 0 15px 40px rgba(20, 36, 51, 0.08);
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.office-card:hover {
+	transform: translateY(-6px);
+	box-shadow: 0 25px 55px rgba(20, 36, 51, 0.15);
+}
+
+.office-card img {
+	height: 200px;
+	object-fit: cover;
+	width: 100%;
+}
+
+.office-info {
+	padding: 1.25rem 1.5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.office-name {
+	font-size: 1.1rem;
+	color: var(--ink);
+}
+
+.office-link {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.65rem 1.5rem;
+	border-radius: 999px;
+	background: #3d83df;
+	color: var(--white);
+	font-size: 0.85rem;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	text-decoration: none;
+	font-weight: 600;
+	transition: background 0.2s ease;
+}
+
+.office-link:hover {
+	background: #346fc0;
+}
+
+.careers-cta {
+	padding: 3rem 0 2rem;
+	text-align: center;
+}
+
+.careers-cta h2 {
+	font-size: clamp(2rem, 3vw, 2.4rem);
+	color: var(--ink);
+	font-weight: 400;
+	margin-bottom: 1.5rem;
+}
+
+.cta-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.85rem 2.5rem;
+	border-radius: 8px;
+	background: #3d83df;
+	color: var(--white);
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	text-decoration: none;
+	transition: background 0.2s ease;
+}
+
+.cta-button:hover {
+	background: #346fc0;
+}
+
+.site-footer {
+	border-top: 1px solid rgba(20, 36, 51, 0.08);
+	padding: 2rem 0 3rem;
+	text-align: center;
+	color: #5e7a7c;
+	font-size: 0.95rem;
+}
+
+.site-footer a {
+	color: #3d83df;
+	text-decoration: none;
+}
+
+.site-footer a:hover {
+	text-decoration: underline;
+}
+
+.site-footer p + p {
+	margin-top: 0.75rem;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
 @media (max-width: 768px) {
 	.page-shell {
 		padding: 0 1.5rem 2.5rem;
@@ -249,5 +477,36 @@ text-align: left;
 	.global-inner {
 		flex-direction: column;
 		text-align: center;
+	}
+
+	.stats {
+		padding: 3rem 0;
+		background-size: cover, 250px;
+	}
+
+	.stats-inner {
+		flex-direction: column;
+		padding: 0 1.5rem;
+		text-align: center;
+	}
+
+	.stats-copy p {
+		margin: 0 auto;
+	}
+
+	.stats-grid {
+		grid-template-columns: 1fr;
+		width: 100%;
+	}
+
+	.office-info {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 1rem;
+	}
+
+	.office-link {
+		width: 100%;
+		justify-content: center;
 	}
 }
